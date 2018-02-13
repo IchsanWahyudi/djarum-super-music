@@ -1,0 +1,38 @@
+{
+  "name": "djarum-super-music",
+  "version": "1.0.0",
+  "description": "this website for campaign djarum super music 2018",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IchsanWahyudi/djarum-super-music.git"
+  },
+  "author": "Ichsan Indra Wahyudi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IchsanWahyudi/djarum-super-music/issues"
+  },
+  "homepage": "https://github.com/IchsanWahyudi/djarum-super-music#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.3.1",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-useref": "^3.1.4",
+    "run-sequence": "^2.2.1"
+  }
+}
