@@ -77,9 +77,47 @@
       </div>
 
       <div class="join-activity">
+        <img class="img-responsive shadow-rock-journey" src="assets/images/shadow-rock-journey.png" alt="">
+        <img class="img-responsive route-rock-journey" src="assets/images/route-rock-journey.png" alt="">
         <h1 class="join-activity__title">my rock journey</h1>
+        <div class="join-activity__container">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="join-activity__input-file">
+                <img class="img-responsive join-activity__input-file__img" src="assets/images/upload-photo.png" alt="">
+                <span>upload photo di sini</span>
+              </div>
+              <input id="input-file" type="file" name="profile-picture">
+            </div>
+            <div class="col-sm-8 join-activity__input-text">
+              <textarea name="message" placeholder="Tulis alasan kenapa lo paling berhak diundang ikutan ke acara Rock Adventure! (max 280 character)"></textarea>
+            </div>
+            <div class="col-sm-12 join-activity__btn">
+              <a id="btn-trigger-modal" class="button-super button-super--primary button-super--see-more" data-toggle="modal" data-target="#modal-thankyou">
+                <span>submit</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
 
+      <div id="modal-thankyou" class="modal fade modal-thankyou" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body modal-thankyou">
+              <div class="modal-thankyou__header">
+                <img class="img-responsive" src="assets/images/cover-thankyou.png" alt="">
+                <h1 class="modal-thankyou__title">Thank you</h1>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et </p>
+              <a class="button-super button-super--primary button-super--see-more modal-thankyou__btn">
+                <span>see your journey</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </body>
 </html>
