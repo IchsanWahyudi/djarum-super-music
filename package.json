@@ -18,6 +18,7 @@
   "homepage": "https://github.com/IchsanWahyudi/djarum-super-music#readme",
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "slick-carousel": "^1.8.1"
   },
