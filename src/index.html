@@ -14,23 +14,96 @@
 </head>
 <body>
   <div id="wrapper">
+    <div id="menu-home" class="menu">
+      <ul class="menu__container menu__left">
+        <li>
+          <a class="menu-active" href="index.html">
+            <span>home</span>
+            <img class="img-responsive menu__container__hover-img" src="assets/images/border-menu.png" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="rundown.html">
+            <span>rundown</span>
+            <img class="img-responsive menu__container__hover-img" src="assets/images/border-menu.png" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="index.html#location">
+            <span>locations</span>
+            <img class="img-responsive menu__container__hover-img" src="assets/images/border-menu.png" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="index.html#performers">
+            <span>performers</span>
+            <img class="img-responsive menu__container__hover-img" src="assets/images/border-menu.png" alt="">
+          </a>
+        </li>
+      </ul>
+      <a href="index.html">
+        <img class="img-responsive menu-logo" src="assets/images/menu-logo.png" alt="">
+      </a>
+      <ul class="menu__container menu__right">
+        <li>
+          <a class="second-menu" href="#">
+            <span>the journey</span>
+            <img class="img-responsive menu__container__hover-img" src="assets/images/border-menu.png" alt="">
+          </a>
+          <ul class="menu__right__second">
+            <li>
+              <a href="join-activity.html">Join activity</a>
+            </li>
+            <li>
+              <a href="how-to.html">How to</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="highlight.html">
+            <span>highlight</span>
+            <img class="img-responsive menu__container__hover-img" src="assets/images/border-menu.png" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="memories.html">
+            <span>memories</span>
+            <img class="img-responsive menu__container__hover-img" src="assets/images/border-menu.png" alt="">
+          </a>
+        </li>
+        <li>
+          <a class="second-menu" href="ticket.html">
+            <span>ticket</span>
+            <img class="img-responsive menu__container__hover-img" src="assets/images/border-menu.png" alt="">
+            <ul class="menu__right__second">
+              <li>
+                <a href="payment-confirmation.html">payment confirmation</a>
+              </li>
+            </ul>
+          </a>
+        </li>
+      </ul>
+    </div>
 
+    <img class="img-responsive shadow" src="assets/images/shadow-detail-top.png" alt="">
+    <img class="img-responsive shadow shadow--bottom-home" src="assets/images/shadow-detail-left.png" alt="">
     <section class="first-section container-fluid">
-      <div class="hero-image">
-        <img class="img-responsive" src="assets/images/hero-img.png" alt="">
-        <a class="explore-video" href="#">Explore video</a>
-        <a class="see-more" href="#">
-          <img class="img-responsive" src="assets/images/seemore-arrow.png" alt="">
-          <span>See more</span>
-        </a>
+      <div class="row">
+        <div class="hero-image">
+          <img class="img-responsive" src="assets/images/hero-img.png" alt="">
+          <a class="explore-video" data-toggle="modal" data-target="#video">Explore video</a>
+          <a class="see-more" href="#join-section">
+            <img class="img-responsive" src="assets/images/seemore-arrow.png" alt="">
+            <span>See more</span>
+          </a>
+        </div>
       </div>
     </section>
 
-    <img class="img-responsive drum-stick" src="assets/images/drum-stick.png" alt="">
 
-    <section class="join-section">
+    <section id="join-section" class="join-section">
+      <img class="img-responsive drum-stick" src="assets/images/drum-stick.png" alt="">
       <img class="img-responsive path-home" src="assets/images/path-home.png" alt="">
-
       <div id="experience" class="experience container">
         <h1 class="experience__title">Experience</h1>
         <div class="row experience__content">
@@ -57,51 +130,70 @@
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
           </div>
         </div>
-        <a class="button-super button-super--primary"href="#">
+        <a class="button-super button-super--primary" href="experience.html">
           <span>Ticket Info</span>
         </a>
       </div>
 
       <div id="location" class="location container-fluid">
         <img class="img-responsive location__background" src="assets/images/maps1.png" alt="">
-        <img class="img-responsive location__destination" src="assets/images/destination.png" alt="">
+        <img class="img-responsive location__destination" src="assets/images/destination-route.png" alt="">
+        <img class="img-responsive shadow mic" src="assets/images/mic.png" alt="">
         <div class="container">
-          <h1 class="location__title">location</h1>
-          <div class="row">
+          <h3 class="location__destination-txt">destination</h3>
+          <h1 class="location__title">locations</h1>
+          <div class="row location__container">
             <div class="col-sm-2 location__content">
-              <div class="location__zoom">
-                <img src="assets/images/jogja.png" alt="">
-                <!-- <h3>jogjakarta</h3> -->
+              <div class="location__zoom zoom-content">
+                <img class="img-responsive" src="assets/images/location1.png" alt="">
+                <h3>jogjakarta</h3>
+                <a href="#">
+                  <div class="location__zoom__detail">
+                    <div>
+                      <div class="location-name-container">
+                        <img class="img-responsive" src="assets/images/back-location.png" alt="">
+                        <h4 class="location-name">Wonogondang camp</h4>
+                      </div>
+                      <h4 class="location-date">17 -18 maret 2018</h4>
+                    </div>
+                    <div class="location__zoom__detail__map">
+                      <span>1 / 7</span>
+                      <img class="img-responsive map-gps" src="assets/images/map-gps.png" alt="">
+                      <img class="img-responsive sq sq--top" src="assets/images/square-map.png" alt="">
+                      <img class="img-responsive sq sq--bottom" src="assets/images/square-map.png" alt="">
+                    </div>
+                  </div>
+                </a>
               </div>
             </div>
             <div class="col-sm-2 location__content">
               <div class="location__zoom">
-                <img src="assets/images/semarang.png" alt="">
-                <!-- <h3>semarang</h3> -->
+                <img class="img-responsive" src="assets/images/location1.png" alt="">
+                <h3>semarang</h3>
               </div>
             </div>
             <div class="col-sm-2 location__content">
               <div class="location__zoom">
-                <img src="assets/images/madiun.png" alt="">
-                <!-- <h3>madiun</h3> -->
+                <img class="img-responsive" src="assets/images/location1.png" alt="">
+                <h3>madiun</h3>
               </div>
             </div>
             <div class="col-sm-2 location__content">
               <div class="location__zoom">
-                <img src="assets/images/cirebon.png" alt="">
-                <!-- <h3>cirebon</h3> -->
+                <img class="img-responsive" src="assets/images/location1.png" alt="">
+                <h3>cirebon</h3>
               </div>
             </div>
             <div class="col-sm-2 location__content">
               <div class="location__zoom">
-                <img src="assets/images/bandung.png" alt="">
-                <!-- <h3>bandung</h3> -->
+                <img class="img-responsive" src="assets/images/location1.png" alt="">
+                <h3>bandung</h3>
               </div>
             </div>
             <div class="col-sm-2 location__content">
               <div class="location__zoom">
-                <img src="assets/images/bogor.png" alt="">
-                <!-- <h3>bogor</h3> -->
+                <img class="img-responsive" src="assets/images/location1.png" alt="">
+                <h3>bogor</h3>
               </div>
               <div>
               </div>
@@ -111,14 +203,42 @@
         </div>
       </div>
 
-      <div class="performer container">
+      <div id="performers" class="performer container">
         <div class="row">
-          <h1 class="performer__title">performer</h1>
+          <h1 class="performer__title">performers</h1>
           <div class="performer__img">
-            <img src="assets/images/performer/performer1.png" alt="">
-            <img src="assets/images/performer/performer2.png" alt="">
-            <img src="assets/images/performer/performer3.png" alt="">
-            <img src="assets/images/performer/performer4.png" alt="">
+            <div class="performer__img__container">
+              <img class="img-responsive" src="assets/images/performer/performer1.png" alt="">
+              <div class="slick-current-display">
+                <div class="slick-current__txt">
+                  <h2>BARASUARA</h2>
+                </div>
+              </div>
+            </div>
+            <div class="performer__img__container">
+              <img class="img-responsive" src="assets/images/performer/performer2.png" alt="">
+              <div class="slick-current-display">
+                <div class="slick-current__txt">
+                  <h2>BARASUARA</h2>
+                </div>
+              </div>
+            </div>
+            <div class="performer__img__container">
+              <img class="img-responsive" src="assets/images/performer/performer3.png" alt="">
+              <div class="slick-current-display">
+                <div class="slick-current__txt">
+                  <h2>BARASUARA</h2>
+                </div>
+              </div>
+            </div>
+            <div class="performer__img__container">
+              <img class="img-responsive" src="assets/images/performer/performer4.png" alt="">
+              <div class="slick-current-display">
+                <div class="slick-current__txt">
+                  <h2>BARASUARA</h2>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -127,12 +247,12 @@
         <img class="journey__shadow img-responsive" src="assets/images/shadow-journey.png" alt="">
         <img class="journey__vinyl img-responsive" src="assets/images/vinyl.png" alt="">
         <img class="journey__ticket img-responsive" src="assets/images/ticket.png" alt="">
-        <h1 class="journey__title">my rock journey</h1>
+        <h1 class="journey__title">the journeys</h1>
         <div class="container">
           <img class="img-responsive journey__img" src="assets/images/pic-your-journey.png" alt="">
           <h3>Ikuti tantangan dan menangkan hadiahnya</h3>
           <p>Dapatkan undangan khusus untuk 10 orang pemenang dan hadiah merchandise limited edition untuk pemenang terpilih dengan mengikuti tantangan Rock Adventure 2018!</p>
-          <a class="button-super button-super--primary" href="#">
+          <a class="button-super button-super--primary" href="join-activity.html">
             <span>Join Now!</span>
           </a>
         </div>
@@ -141,9 +261,6 @@
 
     <footer>
       <ul class="footer">
-        <li>
-          <a href="#">Go to SUPERMUSIC.ID</a>
-        </li>
         <li>
           <a href="#">Terms & Condition</a>
         </li>
@@ -159,6 +276,19 @@
       </ul>
       <span>© 2018 COPYRIGHTS SUPERMUSIC.ID</span>
     </footer>
+
+    <div id="video" class="modal fade modal-video" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="close-modal" data-dismiss="modal">close</div>
+            <div class="modal-video__frame">
+              <iframe width="550" height="315" src="https://www.youtube.com/embed/A2EaurzzvH4" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 </body>
