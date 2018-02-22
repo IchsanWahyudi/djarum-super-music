@@ -30,12 +30,12 @@ gulp.task('sass', function() {
     }))
 })
 
-gulp.task('scripts', function() {
-  gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/slick-carousel/slick/slick.min.js'])
-    .pipe(concat('vendor.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('src/assets/js'));
-});
+// gulp.task('scripts', function() {
+//   gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/slick-carousel/slick/slick.min.js'])
+//     .pipe(concat('vendor.min.js'))
+//     .pipe(uglify())
+//     .pipe(gulp.dest('src/assets/js'));
+// });
 
 gulp.task('images', function() {
   gulp.src('src/assets/images/**/*.+(png|jpg|gif|svg)')
@@ -45,6 +45,13 @@ gulp.task('images', function() {
   ]))
   .pipe(gulp.dest('dist/assets/images'))
 })
+
+gulp.task('scripts', function() {
+  gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js'])
+    .pipe(concat('vendor.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/assets/js'));
+});
 
 gulp.task('clean:dist', function() {
   del.sync('dist');
@@ -60,7 +67,7 @@ gulp.task('useref', function() {
 
 gulp.task('build', function(callback) {
   runSequence('clean:dist',
-    ['sass','useref','images'],
+    ['sass','useref','images','script-vendor'],
     callback
   )
 })
