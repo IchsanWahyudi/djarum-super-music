@@ -217,6 +217,9 @@ a{
   for all title
 */
 
+.privacy-police,
+.faq,
+.term-condition,
 .memories,
 .modal-thankyou,
 .ticket-information,
@@ -1359,15 +1362,12 @@ footer{
   #input-file{
     display: none;
   }
-  .shadow-rock-journey,
-  .route-rock-journey{
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-  .route-rock-journey{
-    right: 0;
-  }
+}
+
+.shadow-rock-journey{
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .modal-thankyou{
@@ -1443,4 +1443,10 @@ footer{
   .modal-body{
     padding: 50px 40px;
   }
+}
+
+.privacy-police,
+.faq,
+.term-condition{
+  padding-top: 200px
 }
