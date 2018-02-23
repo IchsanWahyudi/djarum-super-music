@@ -289,4 +289,34 @@
       </footer>
     </div>
   </body>
+  <script>
+    $(document).ready(function () {
+
+      $('.ticket-information__map').slick({
+        centerMode: true,
+        centerPadding: false,
+        slidesToShow: 3,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+    })
+  </script>
 </html>

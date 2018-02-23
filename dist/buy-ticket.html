@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Djarum Super Music</title>
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap-theme.min.css"> -->
-    <link rel="stylesheet" href="/node_modules/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="assets/css/select2.min.css">
     <link rel="stylesheet" href="assets/css/master.css">
     <script src="assets/js/vendor.min.js" charset="utf-8"></script>
-    <script src="/node_modules/jquery-datepicker/jquery-datepicker.min.js" charset="utf-8"></script>
-    <script src="/node_modules/select2/dist/js/select2.min.js" charset="utf-8"></script>
+    <script src="assets/js/bootstrap-datepicker.min.js" charset="utf-8"></script>
+    <script src="assets/js/select2.min.js" charset="utf-8"></script>
     <script src="assets/js/script.js" charset="utf-8"></script>
   </head>
   <body>
@@ -280,7 +280,6 @@
     $(document).ready(function() {
       $('#datepicker').datepicker({
         format: 'mm/dd/yyyy',
-        startDate: '-3d'
       });
 
       $('.select2').select2({

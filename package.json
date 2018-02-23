@@ -18,9 +18,9 @@
   "homepage": "https://github.com/IchsanWahyudi/djarum-super-music#readme",
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "bootstrap-datepicker": "^1.7.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
-    "jquery-datepicker": "^1.11.5",
     "select2": "^4.0.6-rc.1",
     "slick-carousel": "^1.8.1"
   },

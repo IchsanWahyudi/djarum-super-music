@@ -37,6 +37,15 @@ gulp.task('sass', function() {
 //     .pipe(gulp.dest('src/assets/js'));
 // });
 
+gulp.task('scripts', function() {
+  gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js',])
+    .pipe(concat('vendor.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/assets/js'));
+});
+
+// for production
+
 gulp.task('images', function() {
   gulp.src('src/assets/images/**/*.+(png|jpg|gif|svg)')
   .pipe(imagemin([
@@ -46,12 +55,23 @@ gulp.task('images', function() {
   .pipe(gulp.dest('dist/assets/images'))
 })
 
-gulp.task('scripts', function() {
-  gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js'])
-    .pipe(concat('vendor.min.js'))
+
+gulp.task('script', function() {
+  gulp.src(['src/assets/js/script.js','node_modules/slick-carousel/slick/slick.min.js','node_modules/select2/dist/js/select2.min.js','node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js'])
     .pipe(uglify())
-    .pipe(gulp.dest('dist/assets/js'));
+    .pipe(gulp.dest('dist/assets/js/'));
 });
+
+gulp.task('css', function() {
+  gulp.src(['src/assets/css/responsive.css','src/assets/css/master.css','node_modules/bootstrap/dist/css/bootstrap.min.css','node_modules/slick-carousel/slick/slick.css','node_modules/slick-carousel/slick/slick-theme.css','node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css','node_modules/select2/dist/css/select2.min.css'])
+    .pipe(cssnano())
+    .pipe(gulp.dest('dist/assets/css/'))
+})
+
+gulp.task('fonts', function() {
+  return gulp.src(['src/assets/fonts/**/*','node_modules/slick-carousel/slick/fonts/**/*'])
+  .pipe(gulp.dest('dist/assets/fonts'))
+})
 
 gulp.task('clean:dist', function() {
   del.sync('dist');
@@ -67,7 +87,7 @@ gulp.task('useref', function() {
 
 gulp.task('build', function(callback) {
   runSequence('clean:dist',
-    ['sass','useref','images','script-vendor'],
+    ['useref','images','css','script','fonts','scripts'],
     callback
   )
 })
