@@ -1,5 +1,25 @@
 $(document).ready(function(){
 
+  $('.wrap-bar').click(function () {
+    // setTimeout(function () {
+      // $('.bar').toggleClass('change');
+      $('.menu-mobile').addClass('menu-mobile--show');
+      $('body').addClass('no-scroll');
+      $('.menu').removeClass('menu--show');
+    // }, 0);
+  })
+
+  $('.menu-mobile__close').click(function () {
+    $('.menu').addClass('menu--show');
+    $('.menu-mobile').removeClass('menu-mobile--show');
+    $('body').removeClass('no-scroll');
+  })
+
+  $('#sub-menu1').click(function () {
+    console.log('masuk')
+    $('#sub-menu2').removeClass('in')
+  })
+
   $('#kuantitas').change(function() {
     console.log($('#price-ticket').val())
     var price = $('#price-ticket').val()

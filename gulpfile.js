@@ -30,18 +30,29 @@ gulp.task('sass', function() {
     }))
 })
 
-// gulp.task('scripts', function() {
-//   gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/slick-carousel/slick/slick.min.js'])
-//     .pipe(concat('vendor.min.js'))
-//     .pipe(uglify())
-//     .pipe(gulp.dest('src/assets/js'));
-// });
+gulp.task('cssVendor', function() {
+  gulp.src(['src/assets/css/responsive.css','src/assets/css/master.css','node_modules/bootstrap/dist/css/bootstrap.min.css','node_modules/slick-carousel/slick/slick.css','node_modules/slick-carousel/slick/slick-theme.css','node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css','node_modules/select2/dist/css/select2.min.css'])
+    .pipe(cssnano())
+    .pipe(gulp.dest('src/assets/css/'))
+})
 
 gulp.task('scripts', function() {
   gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js',])
     .pipe(concat('vendor.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('dist/assets/js'));
+});
+
+gulp.task('watch', ['browserSync','sass'], function() {
+  gulp.watch('src/assets/scss/**/*.scss', ['sass']);
+  gulp.watch('src/*.html', browserSync.reload);
+  gulp.watch('src/assets/js/**/*.js', browserSync.reload);
+})
+
+gulp.task('default', function(callback) {
+  runSequence(['sass', 'browserSync', 'watch', 'scripts','cssVendor'],
+    callback
+  )
 });
 
 // for production
@@ -62,11 +73,11 @@ gulp.task('script', function() {
     .pipe(gulp.dest('dist/assets/js/'));
 });
 
-gulp.task('css', function() {
-  gulp.src(['src/assets/css/responsive.css','src/assets/css/master.css','node_modules/bootstrap/dist/css/bootstrap.min.css','node_modules/slick-carousel/slick/slick.css','node_modules/slick-carousel/slick/slick-theme.css','node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css','node_modules/select2/dist/css/select2.min.css'])
-    .pipe(cssnano())
-    .pipe(gulp.dest('dist/assets/css/'))
-})
+// gulp.task('css', function() {
+//   gulp.src(['src/assets/css/responsive.css','src/assets/css/master.css','node_modules/bootstrap/dist/css/bootstrap.min.css','node_modules/slick-carousel/slick/slick.css','node_modules/slick-carousel/slick/slick-theme.css','node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css','node_modules/select2/dist/css/select2.min.css'])
+//     .pipe(cssnano())
+//     .pipe(gulp.dest('dist/assets/css/'))
+// })
 
 gulp.task('fonts', function() {
   return gulp.src(['src/assets/fonts/**/*','node_modules/slick-carousel/slick/fonts/**/*'])
@@ -91,15 +102,3 @@ gulp.task('build', function(callback) {
     callback
   )
 })
-
-gulp.task('watch', ['browserSync','sass'], function() {
-  gulp.watch('src/assets/scss/**/*.scss', ['sass']);
-  gulp.watch('src/*.html', browserSync.reload);
-  gulp.watch('src/assets/js/**/*.js', browserSync.reload);
-})
-
-gulp.task('default', function(callback) {
-  runSequence(['sass', 'browserSync', 'watch', 'scripts'],
-    callback
-  )
-});
