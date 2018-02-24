@@ -34,7 +34,7 @@
           <a href="index.html#performers">performers</a>
         </li>
         <li>
-          <a class="menu-mobile__sub-menu" data-toggle="collapse" data-target="#sub-menu1">the journeys</a>
+          <a class="menu-mobile__sub-menu" data-toggle="collapse" data-target="#sub-menu1" aria-controls="#sub-menu1">the journeys</a>
           <ul id="sub-menu1" class="collapse">
             <li>
               <a href="join-activity.html">join activity</a>
@@ -51,7 +51,7 @@
           <a href="memories.html">memories</a>
         </li>
         <li>
-          <a class="menu-mobile__sub-menu" data-toggle="collapse" data-target="#sub-menu2">ticket</a>
+          <a class="menu-mobile__sub-menu" data-toggle="collapse" data-target="#sub-menu2" aria-controls="#sub-menu2">ticket</a>
           <ul id="sub-menu2" class="collapse">
             <li>
               <a href="ticket.html">buy ticket</a>
@@ -124,15 +124,15 @@
           <a class="second-menu">
             <span>ticket</span>
             <img class="img-responsive menu__container__hover-img" src="assets/images/border-menu.png" alt="">
-            <ul class="menu__right__second">
-              <li>
-                <a href="ticket.html">buy ticket</a>
-              </li>
-              <li>
-                <a href="payment-confirmation.html">payment confirmation</a>
-              </li>
-            </ul>
           </a>
+          <ul class="menu__right__second">
+            <li>
+              <a href="ticket.html">buy ticket</a>
+            </li>
+            <li>
+              <a href="payment-confirmation.html">payment confirmation</a>
+            </li>
+          </ul>
         </li>
       </ul>
       <div class="wrap-bar d-mobile">
@@ -148,7 +148,7 @@
       <div class="row">
         <div class="hero-image">
           <a class="explore-video" data-toggle="modal" data-target="#video">Explore video</a>
-          <a class="see-more" href="#join-section">
+          <a class="see-more" href="#experience">
             <img class="img-responsive" src="assets/images/seemore-arrow.png" alt="">
             <span>See more</span>
           </a>
@@ -189,7 +189,7 @@
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
           </div>
         </div>
-        <a class="button-super button-super--primary wow fadeIn" href="experience.html">
+        <a class="button-super button-super--primary wow fadeIn" href="buy-ticket.html">
           <span>Ticket Info</span>
         </a>
       </div>
@@ -360,7 +360,7 @@
           <div class="modal-body">
             <div id="stop-video" class="close-modal" data-dismiss="modal">close</div>
             <div class="modal-video__frame">
-              <iframe id="video-content" width="550" height="315" src="https://www.youtube.com/embed/A2EaurzzvH4" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+              <iframe id="video-content" class="video-content" src="https://www.youtube.com/embed/A2EaurzzvH4" frameborder="0" allowfullscreen></iframe>
             </div>
           </div>
         </div>

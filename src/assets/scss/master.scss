@@ -253,13 +253,14 @@ a{
     text-align: center;
     z-index: -10;
     transition: all ease 0.4s;
+    padding-top: 60px;
     &--show{
       opacity: 1;
       z-index: 10000;
     }
     ul{
       padding: 0;
-      margin: 60px 0 0;
+      margin: 10px 0 0;
       li{
         list-style: none;
         margin-bottom: 10px;
@@ -278,12 +279,17 @@ a{
         left: 10px;
         content: '';
         background: url(../images/arrow-up.png) no-repeat;
-        transform: rotate(180deg);
+        transform: rotate(0deg);
         display: inline-block;
         width: 14px;
         height: 14px;
         background-size: 14px;
         transition: all ease 0.2s;
+      }
+      &.collapsed{
+        &:after{
+          transform: rotate(180deg);
+        }
       }
     }
     &__close{
@@ -376,22 +382,23 @@ a{
     cursor: pointer;
     border: 1px solid #fff;
     border-radius: 50%;
-    padding: 34px 10px;
-    color: #fff;
+    color: $white;
     font-family: Tungsten-Medium;
-    font-size: 1.4em;
+    font-size: 1em;
     position: absolute;
-    bottom: 30px;
+    bottom: 76px;
     left: 0;
     right: 0;
     margin: 0 auto;
-    width: 97px;
+    width: 60px;
+    height: 60px;
+    line-height: 4.5;
   }
 
   .see-more{
     display: inline;
     position: absolute;
-    bottom: -50px;
+    bottom: 0px;
     left: 0;
     right: 0;
     span{
@@ -556,7 +563,7 @@ a{
 .location{
   position: relative;
   padding-top: 100px;
-  height: 650px;
+  height: 600px;
   .container{
     position: relative;
   }
@@ -710,6 +717,7 @@ a{
 }
 
 .performer{
+  padding-top: 50px;
   &__img{
     .slick{
       &-slide{
