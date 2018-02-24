@@ -27,9 +27,9 @@ $(document).ready(function(){
 
   $('.hero-image').css('height',temp_hg)
 
-  $('.close-modal').click(function(){
-  	$('.video-content')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-  });
+  // $('.close-modal').click(function(){
+  // 	$('.video-content')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+  // });
 
   // for menu
   $('#menu-home').addClass('menu--hidden')
