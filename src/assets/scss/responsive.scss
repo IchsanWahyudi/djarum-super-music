@@ -1,3 +1,11 @@
+@media (min-width: 1920px) {
+  .first-section{
+    .hero-image{
+      height: 1200px !important;
+    }
+  }
+}
+
 @media (min-width: 1441px) {
   .journey__vinyl,
   .journey__ticket,
@@ -12,6 +20,12 @@
       left: 16%;
     }
   }
+
+  .first-section{
+    .hero-image{
+      height: 992px;
+    }
+  }
 }
 
 @media (max-width: 1200px) {
@@ -24,6 +38,26 @@
       }
     }
   }
+  // .first-section{
+  //   .explore-video{
+  //     bottom: 0px;
+  //   }
+  //   .see-more{
+  //     bottom: -80px;
+  //   }
+  // }
+}
+
+@media (max-width: 1150px) {
+  .journey__vinyl,
+  .journey__ticket,
+  .journey__shadow,
+  .mic,
+  .drum-stick,
+  .location__destination,
+  .location__destination-txt{
+    display: none;
+  }
 }
 
 @media (max-width: 992px) {
@@ -32,8 +66,85 @@
     display: block;
   }
 
-  .most-read{
+  .most-read,
+  .path-home{
     display: none;
+  }
+
+  .performer{
+    padding-top: 50px;
+  }
+
+  // .first-section{
+  //   .explore-video{
+  //     bottom: 20px;
+  //     width: 60px;
+  //     height: 60px;
+  //     padding: 0;
+  //     line-height: 1;
+  //     font-size: 1.2em;
+  //     padding-top: 15px;
+  //   }
+  //   .see-more{
+  //     bottom: -60px;
+  //   }
+  // }
+
+  .performer{
+    .slick-center{
+      &.slick-current{
+        .slick-current__txt{
+          height: 50px;
+          bottom: 80px;
+          padding-top: 8px;
+          h2{
+            font-size: 1.4em;
+          }
+        }
+      }
+    }
+  }
+
+  .location{
+    padding-top: 65px;
+    height: auto;
+    &__container{
+      width: 600px;
+    }
+    &__content{
+      margin-bottom: 20px;
+    }
+    .zoom-content{
+      img,h3{
+        transform: scale(1);
+      }
+      h3{
+        padding-top: 0px;
+      }
+    }
+    &__zoom{
+      &__detail-map{
+        display: none;
+      }
+    }
+  }
+
+  .journey{
+    padding: 80px 0;
+    &__img{
+      max-width: 70%;
+    }
+  }
+
+  .experience{
+    &__title{
+      font-size: 12em;
+    }
+    &__content{
+      p{
+        font-size: .8em;
+      }
+    }
   }
 
   .ticket-information{
@@ -164,9 +275,6 @@
     &__profile{
       margin-top: 0px;
     }
-    .modal-dialog{
-      // margin-top: 5;
-    }
     .modal-body{
       padding: 50px 30px;
     }
@@ -175,6 +283,12 @@
 }
 
 @media (max-width: 800px) {
+  .location{
+    &__background{
+      display: none;
+    }
+  }
+
   .memories-modal-slide{
     .modal-dialog{
       width: auto;
@@ -205,6 +319,16 @@
 }
 
 @media (max-width: 768px) {
+  .performer{
+    .slick-center{
+      &.slick-current{
+        .slick-current__txt{
+          bottom: 70px;
+        }
+      }
+    }
+  }
+
   .rundown{
     &__container{
       padding: 40px 0;
@@ -238,6 +362,33 @@
 }
 
 @media (max-width: 767px) {
+
+  .modal-location{
+    .modal-dialog{
+      margin: 11% auto 0;
+    }
+  }
+
+  .location{
+    &__container{
+      width: 100%;
+    }
+  }
+
+  // .first-section{
+  //   .explore-video{
+  //     bottom: 0px;
+  //     width: 60px;
+  //     height: 60px;
+  //     padding: 0;
+  //     line-height: 1;
+  //     font-size: 1.2em;
+  //     padding-top: 15px;
+  //   }
+  //   .see-more{
+  //     bottom: -60px;
+  //   }
+  // }
 
   .ticket-information{
     padding: 30px 0px 50px;
@@ -374,6 +525,69 @@
 }
 
 @media (max-width: 630px) {
+  // .first-section{
+  //   .explore-video{
+  //     bottom: 0px;
+  //     padding: 0;
+  //     line-height: 1;
+  //     font-size: 1em;
+  //     padding-top: 10px;
+  //   }
+  //   .see-more{
+  //     bottom: -80px;
+  //   }
+  // }
+
+  .location{
+    &__container{
+      padding-top: 10px;
+    }
+  }
+
+  .performer{
+    padding-top: 0px;
+    .slick-center{
+      &.slick-current{
+        .slick-current__txt{
+          bottom: 60px;
+        }
+      }
+    }
+  }
+
+  .experience{
+    padding: 0 30px;
+    &__title{
+      font-size: 9em;
+    }
+    &__content{
+      display: block;
+      &__wrapper{
+        margin-bottom: 20px;
+        p{
+          text-align: center !important;
+        }
+      }
+      &__trick-mobile{
+        display: block;
+      }
+      &__trick-desktop{
+        display: none;
+      }
+    }
+  }
+
+  .journey{
+    padding: 40px 15px;
+    h3{
+      font-size: 3.2em;
+    }
+    p{
+      width: 100%;
+      font-size: 2em;
+    }
+  }
+
   footer{
     padding-bottom: 20px;
     height: auto;
@@ -450,6 +664,42 @@
 }
 
 @media (max-width: 414px) {
+  .performer{
+    .slick-center{
+      &.slick-current{
+        .slick-current__txt{
+          bottom: 80px;
+        }
+      }
+    }
+  }
+
+  // .first-section{
+  //   .explore-video{
+  //     bottom: -30px;
+  //     padding: 0;
+  //     line-height: 1;
+  //     font-size: 1.2em;
+  //     padding-top: 15px;
+  //   }
+  //   .see-more{
+  //     bottom: -100px;
+  //   }
+  // }
+
+  .journey{
+    &__img{
+      max-width: 80%;
+      left: 20px;
+    }
+  }
+
+  .experience{
+    &__title{
+      font-size: 7em;
+    }
+  }
+
   .ticket-information{
     &__map{
       &__content{
@@ -596,6 +846,32 @@
 }
 
 @media (max-width: 375px) {
+  .location{
+    padding-top: 30px;
+  }
+
+  .performer{
+    .slick-center{
+      &.slick-current{
+        .slick-current__txt{
+          bottom: 70px;
+        }
+      }
+    }
+  }
+
+  .button-super{
+    span{
+      width: 250px;
+    }
+  }
+
+  .experience{
+    &__title{
+      font-size: 6em;
+    }
+  }
+
   .ticket-information{
     .slick-slide{
       margin-right: 15px;
@@ -668,6 +944,25 @@
 }
 
 @media (max-width: 320px) {
+  .performer{
+    &__title{
+      font-size: 4em;
+    }
+  }
+
+  .journey{
+    padding-top: 20px;
+    &__title{
+      font-size: 4em;
+    }
+    h3{
+      font-size: 3em;
+    }
+    p{
+      font-size: 1.8em;
+    }
+  }
+
   .rundown{
     &__day{
       &__tab{

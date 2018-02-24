@@ -31,16 +31,16 @@ gulp.task('sass', function() {
 })
 
 gulp.task('cssVendor', function() {
-  gulp.src(['src/assets/css/responsive.css','src/assets/css/master.css','node_modules/bootstrap/dist/css/bootstrap.min.css','node_modules/slick-carousel/slick/slick.css','node_modules/slick-carousel/slick/slick-theme.css','node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css','node_modules/select2/dist/css/select2.min.css'])
+  gulp.src(['node_modules/wowjs/css/libs/animate.css','src/assets/css/responsive.css','src/assets/css/master.css','node_modules/bootstrap/dist/css/bootstrap.min.css','node_modules/slick-carousel/slick/slick.css','node_modules/slick-carousel/slick/slick-theme.css','node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css','node_modules/select2/dist/css/select2.min.css'])
     .pipe(cssnano())
     .pipe(gulp.dest('src/assets/css/'))
 })
 
 gulp.task('scripts', function() {
-  gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js',])
+  gulp.src(['node_modules/wowjs/dist/wow.min.js','node_modules/jquery/dist/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js',])
     .pipe(concat('vendor.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('dist/assets/js'));
+    .pipe(gulp.dest('src/assets/js'));
 });
 
 gulp.task('watch', ['browserSync','sass'], function() {

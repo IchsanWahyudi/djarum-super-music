@@ -5,14 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Djarum Super Music</title>
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/master.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <script src="assets/js/vendor.min.js" charset="utf-8"></script>
     <script src="assets/js/script.js" charset="utf-8"></script>
   </head>
   <body>
     <div id="wrapper">
-      <div class="menu">
+      <div class="menu-mobile">
+        <img class="img-responsive menu-mobile__close" src="assets/images/close-modal.png" alt="">
+        <ul>
+          <li>
+            <a href="index.html">home</a>
+          </li>
+          <li>
+            <a href="rundown.html">rundown</a>
+          </li>
+          <li>
+            <a href="index.html#location">locations</a>
+          </li>
+          <li>
+            <a href="index.html#performers">performers</a>
+          </li>
+          <li>
+            <a class="menu-mobile__sub-menu" data-toggle="collapse" data-target="#sub-menu1">the journeys</a>
+            <ul id="sub-menu1" class="collapse">
+              <li>
+                <a href="join-activity.html">join activity</a>
+              </li>
+              <li>
+                <a href="how-to.html">how to</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="highlight.html">highlight</a>
+          </li>
+          <li>
+            <a href="memories.html">memories</a>
+          </li>
+          <li>
+            <a class="menu-mobile__sub-menu" data-toggle="collapse" data-target="#sub-menu2">ticket</a>
+            <ul id="sub-menu2" class="collapse">
+              <li>
+                <a href="ticket.html">buy ticket</a>
+              </li>
+              <li>
+                <a href="payment-confirmation.html">payment confirmation</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="menu menu--show">
         <ul class="menu__container menu__left">
           <li>
             <a href="index.html">
@@ -39,12 +85,12 @@
             </a>
           </li>
         </ul>
-        <a href="index.html">
+        <a class="menu-home-img" href="index.html">
           <img class="img-responsive menu-logo" src="assets/images/menu-logo.png" alt="">
         </a>
         <ul class="menu__container menu__right">
           <li>
-            <a class="second-menu" href="highlight-detail.html">
+            <a class="second-menu menu-active" href="highlight-detail.html">
               <span>the journey</span>
               <img class="img-responsive menu__container__hover-img" src="assets/images/border-menu.png" alt="">
             </a>
@@ -70,10 +116,13 @@
             </a>
           </li>
           <li>
-            <a class="second-menu" href="ticket.html">
+            <a class="second-menu">
               <span>ticket</span>
               <img class="img-responsive menu__container__hover-img" src="assets/images/border-menu.png" alt="">
               <ul class="menu__right__second">
+                <li>
+                  <a href="ticket.html">buy ticket</a>
+                </li>
                 <li>
                   <a href="payment-confirmation.html">payment confirmation</a>
                 </li>
@@ -81,6 +130,11 @@
             </a>
           </li>
         </ul>
+        <div class="wrap-bar d-mobile">
+          <div class="bar bar-1"></div>
+          <div class="bar bar-2"></div>
+          <div class="bar bar-3"></div>
+        </div>
       </div>
 
       <div class="term-condition">

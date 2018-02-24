@@ -5,20 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Djarum Super Music</title>
-  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/node_modules/slick-carousel/slick/slick.css">
-  <link rel="stylesheet" href="/node_modules/slick-carousel/slick/slick-theme.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <link rel="stylesheet" href="assets/css/slick-theme.css">
   <link rel="stylesheet" href="assets/css/master.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
   <script src="assets/js/vendor.min.js" charset="utf-8"></script>
+  <script src="assets/js/slick.min.js" charset="utf-8"></script>
+  <script src="assets/js/wow.min.js" charset="utf-8"></script>
   <script src="assets/js/script.js" charset="utf-8"></script>
 </head>
 <body>
   <div id="wrapper">
-    <div id="menu-home" class="menu">
+    <div class="menu-mobile">
+      <img class="img-responsive menu-mobile__close" src="assets/images/close-modal.png" alt="">
+      <ul>
+        <li>
+          <a href="index.html">home</a>
+        </li>
+        <li>
+          <a href="rundown.html">rundown</a>
+        </li>
+        <li>
+          <a href="index.html#location">locations</a>
+        </li>
+        <li>
+          <a href="index.html#performers">performers</a>
+        </li>
+        <li>
+          <a class="menu-mobile__sub-menu" data-toggle="collapse" data-target="#sub-menu1">the journeys</a>
+          <ul id="sub-menu1" class="collapse">
+            <li>
+              <a href="join-activity.html">join activity</a>
+            </li>
+            <li>
+              <a href="how-to.html">how to</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="highlight.html">highlight</a>
+        </li>
+        <li>
+          <a href="memories.html">memories</a>
+        </li>
+        <li>
+          <a class="menu-mobile__sub-menu" data-toggle="collapse" data-target="#sub-menu2">ticket</a>
+          <ul id="sub-menu2" class="collapse">
+            <li>
+              <a href="ticket.html">buy ticket</a>
+            </li>
+            <li>
+              <a href="payment-confirmation.html">payment confirmation</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div id="menu-home" class="menu menu--show">
       <ul class="menu__container menu__left">
         <li>
-          <a class="menu-active" href="index.html">
+          <a href="index.html">
             <span>home</span>
             <img class="img-responsive menu__container__hover-img" src="assets/images/border-menu.png" alt="">
           </a>
@@ -42,12 +90,12 @@
           </a>
         </li>
       </ul>
-      <a href="index.html">
+      <a class="menu-home-img" href="index.html">
         <img class="img-responsive menu-logo" src="assets/images/menu-logo.png" alt="">
       </a>
       <ul class="menu__container menu__right">
         <li>
-          <a class="second-menu" href="#">
+          <a class="second-menu menu-active" href="highlight-detail.html">
             <span>the journey</span>
             <img class="img-responsive menu__container__hover-img" src="assets/images/border-menu.png" alt="">
           </a>
@@ -73,10 +121,13 @@
           </a>
         </li>
         <li>
-          <a class="second-menu" href="ticket.html">
+          <a class="second-menu">
             <span>ticket</span>
             <img class="img-responsive menu__container__hover-img" src="assets/images/border-menu.png" alt="">
             <ul class="menu__right__second">
+              <li>
+                <a href="ticket.html">buy ticket</a>
+              </li>
               <li>
                 <a href="payment-confirmation.html">payment confirmation</a>
               </li>
@@ -84,14 +135,18 @@
           </a>
         </li>
       </ul>
+      <div class="wrap-bar d-mobile">
+        <div class="bar bar-1"></div>
+        <div class="bar bar-2"></div>
+        <div class="bar bar-3"></div>
+      </div>
     </div>
 
     <img class="img-responsive shadow" src="assets/images/shadow-detail-top.png" alt="">
-    <img class="img-responsive shadow shadow--bottom-home" src="assets/images/shadow-detail-left.png" alt="">
+    <img class="img-responsive shadow shadow--bottom-home wow fadeInLeft" src="assets/images/shadow-detail-left.png" alt="">
     <section class="first-section container-fluid">
       <div class="row">
         <div class="hero-image">
-          <img class="img-responsive" src="assets/images/hero-img.png" alt="">
           <a class="explore-video" data-toggle="modal" data-target="#video">Explore video</a>
           <a class="see-more" href="#join-section">
             <img class="img-responsive" src="assets/images/seemore-arrow.png" alt="">
@@ -103,52 +158,55 @@
 
 
     <section id="join-section" class="join-section">
-      <img class="img-responsive drum-stick" src="assets/images/drum-stick.png" alt="">
-      <img class="img-responsive path-home" src="assets/images/path-home.png" alt="">
+      <img class="img-responsive drum-stick wow fadeInLeft" src="assets/images/drum-stick.png" alt="">
+      <img class="img-responsive path-home wow fadeIn" src="assets/images/path-home.png" alt="">
       <div id="experience" class="experience container">
-        <h1 class="experience__title">Experience</h1>
+        <h1 class="experience__title wow fadeIn">Experience</h1>
         <div class="row experience__content">
-          <div class="col-sm-4">
+          <div class="col-xs-12 col-sm-12 col-md-4 experience__content__wrapper wow fadeInLeft">
             <img class="img-responsive" src="assets/images/ex-nature.png" alt="">
           </div>
-          <div class="col-sm-8">
+          <div class="col-xs-12 col-sm-12 col-md-8 experience__content__wrapper wow fadeInRight">
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
           </div>
         </div>
         <div class="row experience__content">
-          <div class="col-sm-8">
+          <div class="col-xs-12 col-sm-12 col-md-8 experience__content__wrapper experience__content__trick-desktop wow fadeInLeft">
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
           </div>
-          <div class="col-sm-4">
+          <div class="col-xs-12 col-sm-12 col-md-4 experience__content__wrapper wow fadeInRight">
             <img class="img-responsive" src="assets/images/ex-rock.png" alt="">
           </div>
-        </div>
-        <div class="row experience__content">
-          <div class="col-sm-4">
-            <img class="img-responsive" src="assets/images/ex-destination.png" alt="">
-          </div>
-          <div class="col-sm-8">
+          <div class="col-xs-12 col-sm-12 col-md-8 experience__content__wrapper experience__content__trick-mobile wow fadeInLeft">
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
           </div>
         </div>
-        <a class="button-super button-super--primary" href="experience.html">
+        <div class="row experience__content">
+          <div class="col-xs-12 col-sm-12 col-md-4 experience__content__wrapper wow fadeInLeft">
+            <img class="img-responsive" src="assets/images/ex-destination.png" alt="">
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-8 experience__content__wrapper wow fadeInRight">
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+          </div>
+        </div>
+        <a class="button-super button-super--primary wow fadeIn" href="experience.html">
           <span>Ticket Info</span>
         </a>
       </div>
 
       <div id="location" class="location container-fluid">
-        <img class="img-responsive location__background" src="assets/images/maps1.png" alt="">
-        <img class="img-responsive location__destination" src="assets/images/destination-route.png" alt="">
-        <img class="img-responsive shadow mic" src="assets/images/mic.png" alt="">
+        <img class="img-responsive location__background wow fadeInLeft" src="assets/images/maps1.png" alt="" data-wow-delay="0.3s">
+        <img class="img-responsive location__destination wow fadeIn" src="assets/images/destination-route.png" alt="" data-wow-delay="1.7s">
+        <img class="img-responsive shadow mic wow fadeInRight" src="assets/images/mic.png" alt="" data-wow-delay="0.3s">
         <div class="container">
-          <h3 class="location__destination-txt">destination</h3>
-          <h1 class="location__title">locations</h1>
+          <h3 class="location__destination-txt wow fadeIn" data-wow-delay="1.9s">destination</h3>
+          <h1 class="location__title wow fadeIn">locations</h1>
           <div class="row location__container">
-            <div class="col-sm-2 location__content">
+            <div class="col-xs-6 col-sm-4 col-md-2 location__content wow fadeIn" data-wow-delay="0.5s">
               <div class="location__zoom zoom-content">
                 <img class="img-responsive" src="assets/images/location1.png" alt="">
                 <h3>jogjakarta</h3>
-                <a href="#">
+                <a class="location__zoom__detail-map" href="#">
                   <div class="location__zoom__detail">
                     <div>
                       <div class="location-name-container">
@@ -167,31 +225,31 @@
                 </a>
               </div>
             </div>
-            <div class="col-sm-2 location__content">
+            <div class="col-xs-6 col-sm-4 col-md-2 location__content wow fadeIn" data-wow-delay="0.7s">
               <div class="location__zoom">
                 <img class="img-responsive" src="assets/images/location1.png" alt="">
                 <h3>semarang</h3>
               </div>
             </div>
-            <div class="col-sm-2 location__content">
+            <div class="col-xs-6 col-sm-4 col-md-2 location__content wow fadeIn" data-wow-delay="0.9s">
               <div class="location__zoom">
                 <img class="img-responsive" src="assets/images/location1.png" alt="">
                 <h3>madiun</h3>
               </div>
             </div>
-            <div class="col-sm-2 location__content">
+            <div class="col-xs-6 col-sm-4 col-md-2 location__content wow fadeIn" data-wow-delay="1.1s">
               <div class="location__zoom">
                 <img class="img-responsive" src="assets/images/location1.png" alt="">
                 <h3>cirebon</h3>
               </div>
             </div>
-            <div class="col-sm-2 location__content">
+            <div class="col-xs-6 col-sm-4 col-md-2 location__content wow fadeIn" data-wow-delay="1.3s">
               <div class="location__zoom">
                 <img class="img-responsive" src="assets/images/location1.png" alt="">
                 <h3>bandung</h3>
               </div>
             </div>
-            <div class="col-sm-2 location__content">
+            <div class="col-xs-6 col-sm-4 col-md-2 location__content wow fadeIn" data-wow-delay="1.5s">
               <div class="location__zoom">
                 <img class="img-responsive" src="assets/images/location1.png" alt="">
                 <h3>bogor</h3>
@@ -204,9 +262,27 @@
         </div>
       </div>
 
+      <div id="modal-location" class="modal fade modal-location vote-modal-slide" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="close-modal" data-dismiss="modal">close</div>
+              <div class="modal-location__header">
+                <img class="img-responsive" src="assets/images/back-location.png" alt="">
+                <h1 class="modal-location__title">Wonogondang Camp</h1>
+              </div>
+              <p>17 -18 maret 2018</p>
+              <a class="button-super button-super--primary button-super--see-more modal-thankyou__btn" href="how-to.html">
+                <span>see location</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div id="performers" class="performer container">
-        <div class="row">
-          <h1 class="performer__title">performers</h1>
+        <div class="row wow fadeIn">
+          <h1 class="performer__title wow fadeIn">performers</h1>
           <div class="performer__img">
             <div class="performer__img__container">
               <img class="img-responsive" src="assets/images/performer/performer1.png" alt="">
@@ -245,15 +321,15 @@
       </div>
 
       <div class="journey container-fluid">
-        <img class="journey__shadow img-responsive" src="assets/images/shadow-journey.png" alt="">
-        <img class="journey__vinyl img-responsive" src="assets/images/vinyl.png" alt="">
-        <img class="journey__ticket img-responsive" src="assets/images/ticket.png" alt="">
-        <h1 class="journey__title">the journeys</h1>
+        <img class="journey__shadow img-responsive wow fadeIn" src="assets/images/shadow-journey.png" alt="">
+        <img class="journey__vinyl img-responsive wow fadeInLeft" src="assets/images/vinyl.png" alt="" data-wow-delay="0.3s">
+        <img class="journey__ticket img-responsive wow fadeInRight" src="assets/images/ticket.png" alt="" data-wow-delay="0.5s">
+        <h1 class="journey__title wow fadeIn">the journeys</h1>
         <div class="container">
-          <img class="img-responsive journey__img" src="assets/images/pic-your-journey.png" alt="">
-          <h3>Ikuti tantangan dan menangkan hadiahnya</h3>
-          <p>Dapatkan undangan khusus untuk 10 orang pemenang dan hadiah merchandise limited edition untuk pemenang terpilih dengan mengikuti tantangan Rock Adventure 2018!</p>
-          <a class="button-super button-super--primary" href="join-activity.html">
+          <img class="img-responsive journey__img wow fadeInLeft" src="assets/images/pic-your-journey.png" alt="" data-wow-delay="0.7s">
+          <h3 class="wow fadeInRight" data-wow-delay="0.9s">Ikuti tantangan dan menangkan hadiahnya</h3>
+          <p class="wow fadeInRight" data-wow-delay="1.1s">Dapatkan undangan khusus untuk 10 orang pemenang dan hadiah merchandise limited edition untuk pemenang terpilih dengan mengikuti tantangan Rock Adventure 2018!</p>
+          <a class="button-super button-super--primary wow fadeIn" href="join-activity.html" data-wow-delay="1.1s">
             <span>Join Now!</span>
           </a>
         </div>
@@ -282,9 +358,9 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-body">
-            <div class="close-modal" data-dismiss="modal">close</div>
+            <div id="stop-video" class="close-modal" data-dismiss="modal">close</div>
             <div class="modal-video__frame">
-              <iframe width="550" height="315" src="https://www.youtube.com/embed/A2EaurzzvH4" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+              <iframe id="video-content" width="550" height="315" src="https://www.youtube.com/embed/A2EaurzzvH4" frameborder="0" allow="autoplay" allowfullscreen></iframe>
             </div>
           </div>
         </div>
@@ -301,9 +377,18 @@
       slidesToShow: 3,
       responsive: [
         {
+          breakpoint: 992,
+          settings: {
+            arrows: true,
+            centerMode: true,
+            centerPadding: '0px',
+            slidesToShow: 3
+          }
+        },
+        {
           breakpoint: 768,
           settings: {
-            arrows: false,
+            arrows: true,
             centerMode: true,
             centerPadding: '40px',
             slidesToShow: 3
@@ -314,7 +399,16 @@
           settings: {
             arrows: false,
             centerMode: true,
-            centerPadding: '40px',
+            centerPadding: '80px',
+            slidesToShow: 1
+          }
+        },
+        {
+          breakpoint: 321,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '60px',
             slidesToShow: 1
           }
         }

@@ -1,5 +1,28 @@
 $(document).ready(function(){
 
+  new WOW().init();
+
+  var wd = $(window).width();
+  var hg = $(window).height()
+
+  modalLocations()
+  videoFunc()
+
+  $('.hero-image').css('height',hg)
+
+  $(window).resize(function () {
+    console.log('masuk')
+    modalLocations()
+    videoFunc()
+    $('.hero-image').css('height',hg)
+  })
+
+  $('#stop-video').click(function(){
+    $('.html5-video-player').each(function(){
+      $(this).stopVideo();
+    });
+  });
+
   $('.wrap-bar').click(function () {
     // setTimeout(function () {
       // $('.bar').toggleClass('change');
@@ -13,11 +36,6 @@ $(document).ready(function(){
     $('.menu').addClass('menu--show');
     $('.menu-mobile').removeClass('menu-mobile--show');
     $('body').removeClass('no-scroll');
-  })
-
-  $('#sub-menu1').click(function () {
-    console.log('masuk')
-    $('#sub-menu2').removeClass('in')
   })
 
   $('#kuantitas').change(function() {
@@ -34,6 +52,15 @@ $(document).ready(function(){
       $('html, body').animate({
           scrollTop: $($.attr(this, 'href')).offset().top - 100
       }, 600);
+  });
+
+  $(document).on('click', 'a[href^="#"]', function (event) {
+    // event.preventDefault();
+    console.log('test')
+
+      $('html, body').animate({
+          scrollTop: $($.attr(this, 'href')).offset().top -100
+      }, 500);
   });
 
   $(window).scroll(function() {
@@ -125,6 +152,37 @@ $(document).ready(function(){
         backgroundImage: 'url('+e.target.result+')',
     });
     $(".join-activity__input-file img, .join-activity__input-file span").css('opacity','0')
+  }
+
+  function videoResponsive(w, h, l) {
+    $('#video-content').css({
+      width: wd - w,
+      height: hg - h
+    })
+
+    $('.modal-video .modal-content .close-modal').css({
+      left: wd - l,
+      top: '20px'
+    })
+  }
+
+  function modalLocations() {
+    if(wd <= 992 ){
+      $('.location__content').attr('data-toggle','modal');
+      $('.location__content').attr('data-target','#modal-location');
+    }else{
+      $('.location__content').removeAttr('data-toggle');
+    }
+  }
+
+  function videoFunc() {
+    if(wd >= 768 && wd <= 992 ){
+      videoResponsive(100, 100, 100)
+    }else if(wd <= 767){
+      videoResponsive(60, 250, 80)
+    }else{
+      videoResponsive(200, 100, 150)
+    }
   }
 
 })
