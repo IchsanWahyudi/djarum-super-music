@@ -1312,6 +1312,7 @@ footer{
     }
   }
   &__day{
+    padding: 0;
     padding-top: 20px;
     display: flex;
     align-items: center;
@@ -1593,6 +1594,8 @@ footer{
   &__container{
     width: 880px;
     margin: 0 auto;
+    padding: 0 15px;
+    display: table;
     &__content{
       margin-bottom: 80px;
       &:hover{
@@ -1699,6 +1702,7 @@ footer{
     width: 730px;
     margin: 0 auto;
     padding-bottom: 40px;
+    display: table;
   }
   &__form{
     label{

@@ -27,12 +27,22 @@
 }
 
 @media (max-width: 992px) {
+
   .d-mobile{
     display: block;
   }
 
   .most-read{
     display: none;
+  }
+
+  .ticket-information{
+    .slick-prev{
+      margin-top: 27%;
+    }
+    .slick-next{
+      margin-top: 26%;
+    }
   }
 
   .highlight-detail{
@@ -67,8 +77,38 @@
     }
   }
 
-  .memories{
+  .rundown,
+  .memories,
+  .ticket{
     padding-top: 100px;
+  }
+
+  .rundown{
+    &__title{
+      margin-bottom: 30px;
+    }
+    &__day{
+      padding: 0;
+    }
+  }
+
+  .ticket-information{
+    &__title{
+      font-size: 6em;
+    }
+    padding-top: 40px
+  }
+
+  .ticket{
+    &__container{
+      width: 740px;
+    }
+  }
+
+  .payment-confirmation{
+    &__title{
+      font-size: 6em;
+    }
   }
 
   .join-activity{
@@ -141,6 +181,12 @@
     }
   }
 
+  .ticket{
+    &__container{
+      width: 740px;
+    }
+  }
+
   .join-activity{
     &__container{
       width: 600px;
@@ -159,14 +205,128 @@
 }
 
 @media (max-width: 768px) {
+  .rundown{
+    &__container{
+      padding: 40px 0;
+      .tab-content{
+        margin: 0;
+      }
+    }
+  }
+
   .how-to-win{
     h4{
       width: 500px;
     }
   }
+
+  .ticket{
+    &__container{
+      &__content{
+        &:hover{
+          .ticket{
+            &__img{
+              img{
+                transform: rotate(0deg) scale(1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 767px) {
+
+  .ticket-information{
+    padding: 30px 0px 50px;
+    &__map{
+      &__content{
+        padding-top: 20px;
+        h4,h5{
+          font-size: 1.4em;
+        }
+        h5{
+          &:last-child{
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .payment-confirmation{
+    &__title{
+      font-size: 5em;
+    }
+  }
+
+  .buy-ticket{
+    &__container{
+      width: 100%;
+      padding: 0 30px 40px;
+    }
+    &__form{
+      &__content{
+        padding: 0;
+        .col-sm-6{
+          &:first-child{
+            margin-bottom: 20px;
+          }
+        }
+        .upload-file{
+          width: 250px;
+          margin: 0 auto;
+        }
+        .payment-btn{
+          text-align: center;
+        }
+      }
+    }
+    &__count{
+      text-align: center;
+      h5{
+        margin: 0 0 10px;
+      }
+      .col-sm-25{
+        float: none;
+        margin-bottom: 20px;
+        .category-ticket{
+          top: 0;
+        }
+      }
+      .select-location,
+      .select-quantity{
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .modal-buy-ticket{
+    .modal-dialog{
+      margin-left: auto;
+      margin-right: auto;
+      width: auto;
+    }
+  }
+
+  .ticket{
+    &__container{
+      width: 100%;
+    }
+    &__desc,
+    &__img{
+      text-align: center;
+      &--left{
+        margin-bottom: 20px;
+      }
+    }
+    &__desc{
+      margin-bottom: 40px;
+    }
+  }
+
   .join-activity{
     &__container{
       width: 100%;
@@ -256,15 +416,89 @@
     }
   }
 
+  .ticket{
+    padding-top: 80px;
+  }
+
   .the-journeys{
     &__content{
       padding: 0 30px;
       width: 100%;
     }
   }
+
+  .faq,
+  .highlight,
+  .how-to-win,
+  .join-activity,
+  .journey,
+  .location,
+  .memories,
+  .modal-thankyou,
+  .performer,
+  .privacy-police,
+  .rundown,
+  .term-condition,
+  .the-journeys,
+  .ticket-information,
+  .ticket{
+    &__title{
+      font-size: 6em;
+      margin-bottom: 20px;
+    }
+  }
 }
 
 @media (max-width: 414px) {
+  .ticket-information{
+    &__map{
+      &__content{
+        h4,h5{
+          font-size: 2.2em;
+        }
+      }
+    }
+  }
+
+  .rundown{
+    &__day{
+      &__tab{
+        padding: 10px 0;
+      }
+    }
+    table{
+      tr{
+        &:first-child{
+          td{
+            font-size: 2.6em;
+          }
+        }
+        td{
+          font-size: 2em;
+        }
+      }
+    }
+  }
+
+  .ticket{
+    h2{
+      font-size: 2.2em;
+      margin-bottom: 20px;
+    }
+    &__container{
+      padding: 0 30px;
+      &__content{
+        margin-bottom: 40px;
+      }
+      h2{
+        font-size: 2.4em;
+      }
+    }
+    &__desc{
+      padding: 0;
+    }
+  }
+
   .highlight-detail{
     &__content{
       padding-top: 10px;
@@ -306,6 +540,7 @@
     }
   }
 
+  .rundown,
   .join-activity{
     padding-top: 80px;
   }
@@ -327,7 +562,6 @@
   .ticket{
     &__title{
       font-size: 5em;
-      margin-bottom: 20px;
     }
   }
 
@@ -362,6 +596,43 @@
 }
 
 @media (max-width: 375px) {
+  .ticket-information{
+    .slick-slide{
+      margin-right: 15px;
+    }
+  }
+
+  .ticket-information{
+    &__map{
+      &__content{
+        h4,h5{
+          font-size: 1.6em;
+        }
+      }
+    }
+  }
+
+  .ticket{
+    &__container{
+      &__content{
+        padding: 0;
+      }
+    }
+    &__desc{
+      h3{
+        font-size: 3.4em;
+        margin: 0;
+      }
+      h4{
+        font-size: 3em;
+        margin: 0;
+      }
+      p{
+        font-size: 2.4em;
+      }
+    }
+  }
+
   .highlight{
     &__input{
       width: 260px;
@@ -397,6 +668,30 @@
 }
 
 @media (max-width: 320px) {
+  .rundown{
+    &__day{
+      &__tab{
+        font-size: 2.4em;
+      }
+    }
+  }
+
+  .payment-confirmation{
+    &__title{
+      font-size: 3.4em;
+    }
+    h2{
+      font-size: 1.8em;
+      padding: 0 15px;
+    }
+  }
+
+  .buy-ticket{
+    &__container{
+      padding: 0 10px 30px;
+    }
+  }
+
   .modal-thankyou{
     p{
       width: 220px;
@@ -429,4 +724,22 @@
       }
     }
   }
+
+  .ticket-information{
+    padding-top: 10px;
+    &__title{
+      font-size: 4em;
+    }
+    .slick-slide{
+      left: -10px;
+    }
+    &__map{
+      &__content{
+        h4,h5{
+          font-size: 1.6em;
+        }
+      }
+    }
+  }
+
 }
