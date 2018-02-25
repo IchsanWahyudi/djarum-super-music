@@ -27,9 +27,9 @@ $(document).ready(function(){
 
   $('.hero-image').css('height',temp_hg)
 
-  // $('.close-modal').click(function(){
-  // 	$('.video-content')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-  // });
+  $('#stop-video').click(function(){
+  	$('#video-content')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+  });
 
   // for menu
   $('#menu-home').addClass('menu--hidden')
@@ -78,9 +78,6 @@ $(document).ready(function(){
     var scroll = ths.offset().top
     if (ths[0].id == 'performers') {
       scroll = scroll - 50
-      if(wd > 768){
-        scroll = scroll - 80
-      }
     }else{
       scroll = scroll - 20
     }
