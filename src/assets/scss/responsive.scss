@@ -62,6 +62,11 @@
 }
 
 @media (max-width: 992px) {
+  .faq,
+  .privacy-police,
+  .term-condition{
+    padding-top: 100px;
+  }
 
   .d-mobile{
     display: block;
@@ -74,6 +79,23 @@
 
   .performer{
     padding-top: 50px;
+  }
+
+  .contact{
+    &__form{
+      &__info{
+        margin-top: 20px;
+      }
+    }
+    form{
+      margin-top: 30px;
+    }
+    &__input{
+      padding-left: 15px;
+    }
+    &__btn{
+      text-align: center;
+    }
   }
 
   .performer{
@@ -307,11 +329,19 @@
 }
 
 @media (max-width: 768px) {
+  .faq,
+  .privacy-police,
+  .term-condition{
+    &__content{
+      padding: 0 15px;
+    }
+  }
+
   .performer{
     .slick-center{
       &.slick-current{
         .slick-current__txt{
-          bottom: 70px;
+          bottom: 80px;
         }
       }
     }
@@ -350,6 +380,15 @@
 }
 
 @media (max-width: 767px) {
+  .faq,
+  .privacy-police,
+  .term-condition{
+    &__content{
+      ul{
+        // padding-left: 1px;
+      }
+    }
+  }
 
   .vote-modal-slide{
     .modal-body{
@@ -507,18 +546,11 @@
 }
 
 @media (max-width: 630px) {
-  // .first-section{
-  //   .explore-video{
-  //     bottom: 0px;
-  //     padding: 0;
-  //     line-height: 1;
-  //     font-size: 1em;
-  //     padding-top: 10px;
-  //   }
-  //   .see-more{
-  //     bottom: -80px;
-  //   }
-  // }
+  .faq,
+  .privacy-police,
+  .term-condition{
+    padding-top: 80px;
+  }
 
   .location{
     &__container{
@@ -828,6 +860,16 @@
 }
 
 @media (max-width: 375px) {
+  .contact{
+    &__form{
+      &__info{
+        p{
+          font-size: 1.6em;
+        }
+      }
+    }
+  }
+
   .location{
     padding-top: 30px;
   }

@@ -217,7 +217,7 @@ a{
     .bar{
       width: 35px;
       height: 5px;
-      background-color: black;
+      background-color: #ffffcc;
       margin: 6px 0;
       transition: .4s;
       border-radius: 2px;
@@ -258,9 +258,14 @@ a{
       opacity: 1;
       z-index: 10000;
     }
+    .menu_active{
+      > img{
+        opacity: 1;
+      }
+    }
     ul{
       padding: 0;
-      margin: 10px 0 0;
+      margin: 5px 0 0;
       li{
         list-style: none;
         margin-bottom: 10px;
@@ -273,22 +278,26 @@ a{
       }
     }
     &__sub-menu{
-      &:after{
-        position: relative;
-        top: -4px;
-        left: 10px;
-        content: '';
-        background: url(../images/arrow-up.png) no-repeat;
-        transform: rotate(0deg);
-        display: inline-block;
-        width: 14px;
-        height: 14px;
-        background-size: 14px;
-        transition: all ease 0.2s;
+      span{
+        &:after{
+          position: relative;
+          top: -4px;
+          left: 10px;
+          content: '';
+          background: url(../images/arrow-up.png) no-repeat;
+          transform: rotate(0deg);
+          display: inline-block;
+          width: 14px;
+          height: 14px;
+          background-size: 14px;
+          transition: all ease 0.2s;
+        }
       }
       &.collapsed{
-        &:after{
-          transform: rotate(180deg);
+        span{
+          &:after{
+            transform: rotate(180deg);
+          }
         }
       }
     }
@@ -562,6 +571,7 @@ a{
 }
 
 .location{
+  $c: &;
   position: relative;
   padding-top: 100px;
   height: 600px;
@@ -609,8 +619,13 @@ a{
       padding-top: 30px;
     }
     &:hover{
-      .location__zoom__detail{
-        opacity: 1;
+      #{$c}{
+        &__zoom{
+          &__detail{
+            opacity: 1;
+            z-index: 1;
+          }
+        }
       }
     }
   }
@@ -634,9 +649,10 @@ a{
       text-align: left;
       font-size: 2em;
       color: $text-color;
-      position: relative;
-      left: 110px;
+      position: absolute;
+      left: 0px;
       display: flex;
+      z-index: -1;
       .location{
         &-name{
           font-size: 1em;
@@ -690,6 +706,43 @@ a{
       }
     }
   }
+  .non-zoom-content{
+    #{$c}{
+      &__zoom{
+        &__detail{
+          width: 250px;
+          &__map{
+            right: 30px;
+            span{
+              top: 12px;
+            }
+            .sq{
+              &--top{
+                top: 0px;
+              }
+            }
+          }
+          .location-name-container{
+            img{
+              transform: scale(1.2);
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+    &:hover{
+      #{$c}{
+        &__zoom{
+          &__detail{
+            opacity: 1;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+
 }
 
 .modal-location{
@@ -1467,6 +1520,8 @@ footer{
 .join-activity{
   padding: 170px 0 150px;
   display: table;
+  margin: 0 auto;
+
   &__container{
     width: 990px;
     margin: 0 auto;
@@ -1619,9 +1674,40 @@ footer{
 .privacy-police,
 .faq,
 .term-condition{
-  padding-top: 200px
+  padding-top: 200px;
+  padding-bottom: 40px;
+  &__title{
+    margin-bottom: 40px;
+  }
+  &__content{
+    text-align: justify;
+    h2{
+      font-size: 3em;
+    }
+    p{
+      font-size: 1.8em;
+      line-height: 1.2;
+    }
+    ul{
+      font-size: 1.8em;
+      &.number-list{
+        li{
+          list-style: lower-roman;
+        }
+      }
+      li{
+        span{
+          position: relative;
+          left: 10px;
+        }
+        ul{
+          font-size: 1em;
+          margin-bottom: -30px;
+        }
+      }
+    }
+  }
 }
-
 /*
   Ticket
 */
@@ -1903,4 +1989,68 @@ footer{
 
 .payment-btn{
   text-align: right;
+}
+
+.contact{
+  &__form{
+    margin-top: 30px;
+    padding-bottom: 40px;
+    #map{
+      width: 100%;
+      height: 250px;
+    }
+    &__info{
+      margin-top: 40px;
+      span{
+        display: flex;
+        align-items: center;
+        i{
+          font-size: 2em;
+          margin-right: 10px;
+          position: relative;
+          &.fa-building{
+            top: -12px;
+          }
+          &.fa-phone{
+            top: 8px;
+          }
+          &.fa-envelope{
+            top: 9px;
+            font-size: 1.6em
+          }
+        }
+        h2,h3{
+          color: #333;
+          margin: 0;
+        }
+        h2{
+          margin-bottom: 20px;
+        }
+        h3{
+          margin-top: 20px
+        }
+      }
+      p{
+        font-size: 2em;
+        margin: 0;
+        line-height: 1.2;
+      }
+    }
+  }
+  &__input{
+    margin-bottom: 20px;
+    padding-left: 0;
+    h2{
+      margin: 0;
+      text-align: left;
+    }
+    label{
+      display: block;
+    }
+    textarea{
+      width: 100%;
+      resize: none;
+      border: solid black 1px;
+    }
+  }
 }
