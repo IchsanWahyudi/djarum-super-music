@@ -61,10 +61,18 @@
             </a>
           </li>
           <li>
-            <a href="memories.html">
+            <a class="menu-mobile__sub-menu collapsed" data-toggle="collapse" data-target="#sub-menu3" aria-controls="#sub-menu3">
               <span>memories</span>
               <img class="img-responsive menu__container__hover-img" src="assets/images/border-menu.png" alt="">
             </a>
+            <ul id="sub-menu3" class="collapse">
+              <li>
+                <a href="memories-photos.html">photo</a>
+              </li>
+              <li>
+                <a href="memories-videos.html">video</a>
+              </li>
+            </ul>
           </li>
           <li>
             <a class="menu-mobile__sub-menu collapsed menu-active" data-toggle="collapse" data-target="#sub-menu2" aria-controls="#sub-menu2">
@@ -134,10 +142,18 @@
             </a>
           </li>
           <li>
-            <a href="memories.html">
+            <a class="second-menu">
               <span>memories</span>
               <img class="img-responsive menu__container__hover-img" src="assets/images/border-menu.png" alt="">
             </a>
+            <ul class="menu__right__second">
+              <li>
+                <a href="memories-photos.html">photos</a>
+              </li>
+              <li>
+                <a href="memories-videos.html">videos</a>
+              </li>
+            </ul>
           </li>
           <li>
             <a class="second-menu menu-active">
@@ -209,14 +225,14 @@
                 </div>
               </div>
               <div class="col-sm-12 buy-ticket__form__content">
-                <div class="col-sm-6">
+                <div class="col-sm-6 col-md-6">
                   <label for="">Upload File<span>*</span></label>
                   <div class="upload-file">
                     <h3>Upload bukti pembayaran <br>kamu <span>di sini.</span></h3>
                   </div>
                   <input id="upload-struk" type="file" name="file" value="">
                 </div>
-                <div class="col-sm-12 col-md-4 payment-btn">
+                <div class="col-sm-6 col-md-6 payment-btn">
                   <a class="button-super button-super--primary button-super--see-more" data-toggle="modal" data-target="#modal-thankyou-payment">
                     <span>submit</span>
                   </a>
@@ -244,24 +260,23 @@
         </div>
       </div>
 
-      <footer>
-        <ul class="footer">
-          <li>
-            <a href="term-condition.html">Terms & Condition</a>
-          </li>
-          <li>
-            <a href="privacy-police.html">Privacy Police</a>
-          </li>
-          <li>
-            <a href="faq.html">FAQ's</a>
-          </li>
-          <li>
-            <a href="contact.html">Contact</a>
-          </li>
-        </ul>
-        <span>© 2018 COPYRIGHTS SUPERMUSIC.ID</span>
-      </footer>
-
     </div>
+    <footer class="footer-bottom">
+      <ul class="footer">
+        <li>
+          <a href="term-condition.html">Terms & Condition</a>
+        </li>
+        <li>
+          <a href="privacy-police.html">Privacy Police</a>
+        </li>
+        <li>
+          <a href="faq.html">FAQ's</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+      <span>© 2018 COPYRIGHTS SUPERMUSIC.ID</span>
+    </footer>
   </body>
 </html>

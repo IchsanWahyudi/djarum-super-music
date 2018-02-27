@@ -1,7 +1,7 @@
 @media (min-width: 1920px) {
-  .first-section{
-    .hero-image{
-      height: 1200px !important;
+  .highlight-detail{
+    &__title{
+      left: 20% !important;
     }
   }
 
@@ -15,12 +15,21 @@
   }
 }
 
+@media (min-width: 2200px) {
+  .highlight-detail{
+    &__title{
+      left: 25% !important;
+    }
+  }
+}
+
 @media (min-width: 1441px) {
   .journey__vinyl,
   .journey__ticket,
   .mic,
   .drum-stick,
-  .shadow{
+  .shadow,
+  .shadow-rock-journey{
     display: none;
   }
 
@@ -61,6 +70,27 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .ticket-information{
+    .slick{
+      &-prev{
+        left: -35px;
+      }
+      &-next{
+        right: -5px;
+      }
+    }
+  }
+
+  .experience{
+    &__title{
+      &--head{
+        font-size: 18em;
+      }
+    }
+  }
+}
+
 @media (max-width: 992px) {
   .faq,
   .privacy-police,
@@ -75,10 +105,6 @@
   .most-read,
   .path-home{
     display: none;
-  }
-
-  .performer{
-    padding-top: 50px;
   }
 
   .contact{
@@ -99,6 +125,7 @@
   }
 
   .performer{
+    padding-top: 0px;
     .slick-center{
       &.slick-current{
         .slick-current__txt{
@@ -114,7 +141,7 @@
   }
 
   .location{
-    padding-top: 65px;
+    padding-top: 140px;
     height: auto;
     &__container{
       width: 600px;
@@ -138,29 +165,32 @@
   }
 
   .journey{
-    padding: 80px 0;
+    padding-top: 60px;
     &__img{
       max-width: 70%;
     }
   }
 
-  .experience{
-    &__title{
-      font-size: 12em;
-    }
-    &__content{
-      p{
-        font-size: .8em;
+  .join-section{
+    .experience{
+      top: 100px;
+      &__title{
+        font-size: 6em;
+      }
+      &-img{
+        top: 100px;
       }
     }
   }
 
   .ticket-information{
-    .slick-prev{
-      margin-top: 27%;
-    }
-    .slick-next{
-      margin-top: 26%;
+    .slick{
+      &-prev{
+        left: -50px;
+      }
+      &-next{
+        right: -20px;
+      }
     }
   }
 
@@ -174,7 +204,7 @@
   }
 
   .highlight{
-    padding-top: 100px;
+    padding: 100px 0 0;
     &--related{
       padding-top: 50px;
     }
@@ -380,12 +410,20 @@
 }
 
 @media (max-width: 767px) {
-  .faq,
-  .privacy-police,
-  .term-condition{
-    &__content{
-      ul{
-        // padding-left: 1px;
+  .join-section{
+    .experience{
+      top: 80px;
+      &-img{
+        top: 80px;
+      }
+      &__title{
+        &--head{
+          font-size: 14em;
+        }
+      }
+      p{
+        width: 100%;
+        padding: 0 15px;
       }
     }
   }
@@ -412,7 +450,7 @@
   }
 
   .ticket-information{
-    padding: 30px 0px 50px;
+    // padding: 30px 0px 50px;
     &__map{
       &__content{
         padding-top: 20px;
@@ -546,6 +584,22 @@
 }
 
 @media (max-width: 630px) {
+  .memories-modal-slide{
+    &--video{
+      .vote-modal-slide{
+        &__content{
+          iframe{
+            height: 300px;
+          }
+        }
+      }
+    }
+  }
+
+  .ticket-information{
+    padding-bottom: 50px;
+  }
+
   .faq,
   .privacy-police,
   .term-condition{
@@ -569,30 +623,30 @@
     }
   }
 
-  .experience{
-    padding: 0 30px;
-    &__title{
-      font-size: 9em;
-    }
-    &__content{
-      display: block;
-      &__wrapper{
-        margin-bottom: 20px;
-        p{
-          text-align: center !important;
+  .join-section{
+    .experience{
+      padding: 0 30px;
+      top: 40px;
+      &-img{
+        top: 40px;
+      }
+      &__title{
+        &--head{
+          font-size: 10em;
         }
       }
-      &__trick-mobile{
-        display: block;
-      }
-      &__trick-desktop{
-        display: none;
+      p{
+        padding: 0;
       }
     }
   }
 
+  .location{
+    padding-top: 80px;
+  }
+
   .journey{
-    padding: 40px 15px;
+    padding: 40px 15px 50px;
     h3{
       font-size: 3.2em;
     }
@@ -626,7 +680,7 @@
   }
 
   .memories{
-    padding-top: 80px;
+    padding: 80px 0 60px;
   }
 
   .modal-thankyou{
@@ -645,7 +699,12 @@
   }
 
   .ticket{
-    padding-top: 80px;
+    padding: 80px 0 0;
+    &__container{
+      &__content{
+        margin-bottom: 60px;
+      }
+    }
   }
 
   .the-journeys{
@@ -677,7 +736,46 @@
   }
 }
 
+@media (max-width: 479px) {
+  .performer{
+    .slick-center{
+      &.slick-current{
+        .slick-current__txt{
+          bottom: 100px;
+        }
+      }
+    }
+  }
+
+  .join-section{
+    .experience{
+      padding: 0 30px;
+      top: 45px;
+      &-img{
+        top: 45px;
+      }
+      &__title{
+        font-size: 5em;
+        &--head{
+          font-size: 10em;
+        }
+      }
+      p{
+        padding: 0;
+      }
+    }
+  }
+}
+
 @media (max-width: 414px) {
+  .join-activity{
+    &__input{
+      &-text{
+        padding: 0 30px;
+      }
+    }
+  }
+
   .performer{
     .slick-center{
       &.slick-current{
@@ -687,19 +785,6 @@
       }
     }
   }
-
-  // .first-section{
-  //   .explore-video{
-  //     bottom: -30px;
-  //     padding: 0;
-  //     line-height: 1;
-  //     font-size: 1.2em;
-  //     padding-top: 15px;
-  //   }
-  //   .see-more{
-  //     bottom: -100px;
-  //   }
-  // }
 
   .journey{
     &__img{
@@ -850,10 +935,35 @@
   }
 
   .the-journeys{
+    padding-bottom: 50px;
     &__content{
       margin-top: 40px;
       &__txt{
         margin-top: 20px;
+      }
+    }
+    .button-super{
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .join-section{
+    .experience{
+      padding: 0 30px;
+      top: 45px;
+      &-img{
+        top: 45px;
+      }
+      &__title{
+        font-size: 4em;
+        &--head{
+          font-size: 10em;
+        }
+      }
+      p{
+        padding: 0;
       }
     }
   }
@@ -870,8 +980,25 @@
     }
   }
 
+  .join-section{
+    .experience{
+      top: 30px;
+      &-img{
+        top: 30px;
+      }
+      &__title{
+        &--head{
+          font-size: 8em;
+        }
+      }
+    }
+  }
+
   .location{
-    padding-top: 30px;
+    padding-top: 60px;
+    &__title{
+      font-size: 4em !important;
+    }
   }
 
   .performer{
@@ -969,9 +1096,20 @@
 }
 
 @media (max-width: 320px) {
-  // .join-section{
-  //   margin-top: 60px;
-  // }
+  .join-section{
+    .experience{
+      top: 30px;
+      &-img{
+        top: 30px;
+      }
+      &__title{
+        font-size: 3.5em !important;
+        &--head{
+          font-size: 7em;
+        }
+      }
+    }
+  }
 
   .first-section{
     .explore-video{

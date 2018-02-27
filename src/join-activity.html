@@ -41,7 +41,7 @@
             </a>
           </li>
           <li>
-            <a class="menu-mobile__sub-menu collapsed" data-toggle="collapse" data-target="#sub-menu1" aria-controls="#sub-menu1">
+            <a class="menu-mobile__sub-menu collapsed menu-active" data-toggle="collapse" data-target="#sub-menu1" aria-controls="#sub-menu1">
               <span>the journeys</span>
               <img class="img-responsive menu__container__hover-img" src="assets/images/border-menu.png" alt="">
             </a>
@@ -61,13 +61,21 @@
             </a>
           </li>
           <li>
-            <a href="memories.html">
+            <a class="menu-mobile__sub-menu collapsed" data-toggle="collapse" data-target="#sub-menu3" aria-controls="#sub-menu3">
               <span>memories</span>
               <img class="img-responsive menu__container__hover-img" src="assets/images/border-menu.png" alt="">
             </a>
+            <ul id="sub-menu3" class="collapse">
+              <li>
+                <a href="memories-photos.html">photo</a>
+              </li>
+              <li>
+                <a href="memories-videos.html">video</a>
+              </li>
+            </ul>
           </li>
           <li>
-            <a class="menu-mobile__sub-menu collapsed menu-active" data-toggle="collapse" data-target="#sub-menu2" aria-controls="#sub-menu2">
+            <a class="menu-mobile__sub-menu collapsed" data-toggle="collapse" data-target="#sub-menu2" aria-controls="#sub-menu2">
               <span>ticket</span>
               <img class="img-responsive menu__container__hover-img" src="assets/images/border-menu.png" alt="">
             </a>
@@ -134,10 +142,18 @@
             </a>
           </li>
           <li>
-            <a href="memories.html">
+            <a class="second-menu">
               <span>memories</span>
               <img class="img-responsive menu__container__hover-img" src="assets/images/border-menu.png" alt="">
             </a>
+            <ul class="menu__right__second">
+              <li>
+                <a href="memories-photos.html">photos</a>
+              </li>
+              <li>
+                <a href="memories-videos.html">videos</a>
+              </li>
+            </ul>
           </li>
           <li>
             <a class="second-menu">
@@ -162,26 +178,23 @@
       </div>
 
       <div class="join-activity">
-        <img class="img-responsive shadow-rock-journey" src="assets/images/shadow-rock-journey.png" alt="">
         <h1 class="join-activity__title">the journey</h1>
         <div class="join-activity__container">
-          <!-- <div class="row"> -->
-            <div class="col-xs-12 col-sm-5 col-md-4">
-              <div class="join-activity__input-file">
-                <img class="img-responsive join-activity__input-file__img" src="assets/images/upload-photo.png" alt="">
-                <span>upload photo di sini</span>
-              </div>
-              <input id="input-file" type="file" name="profile-picture">
+          <div class="col-xs-12 col-sm-5 col-md-4">
+            <div class="join-activity__input-file">
+              <img class="img-responsive join-activity__input-file__img" src="assets/images/upload-photo.png" alt="">
+              <span>upload photo di sini</span>
             </div>
-            <div class="col-xs-12 col-sm-7 col-md-8 join-activity__input-text">
-              <textarea name="message" placeholder="Tulis alasan kenapa lo paling berhak diundang ikutan ke acara Rock Adventure! (max 280 character)"></textarea>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 join-activity__btn">
-              <a id="btn-trigger-modal" class="button-super button-super--primary button-super--see-more" data-toggle="modal" data-target="#modal-thankyou">
-                <span>submit</span>
-              </a>
-            </div>
-          <!-- </div> -->
+            <input id="input-file" type="file" name="profile-picture">
+          </div>
+          <div class="col-xs-12 col-sm-7 col-md-8 join-activity__input-text">
+            <textarea name="message" placeholder="Tulis alasan kenapa lo paling berhak diundang ikutan ke acara Rock Adventure! (max 280 character)"></textarea>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12 join-activity__btn">
+            <a id="btn-trigger-modal" class="button-super button-super--primary button-super--see-more" data-toggle="modal" data-target="#modal-thankyou">
+              <span>submit</span>
+            </a>
+          </div>
         </div>
       </div>
 

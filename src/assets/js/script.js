@@ -31,6 +31,11 @@ $(document).ready(function(){
   	$('#video-content')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
   });
 
+  $('.memories-modal-slide--video, .stop-video-memories').click(function(){
+  	$('.video-memories')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+  });
+
+
   // for menu
   $('#menu-home').addClass('menu--hidden')
 
@@ -65,8 +70,13 @@ $(document).ready(function(){
   })
 
   $('.see-more').click(function (event) {
+    var n = 40;
+    if (wd <= 320) {
+      n = 30
+    }
+    console.log(n)
     $('html, body').animate({
-      scrollTop: $($.attr(this, 'href')).offset().top - 100
+      scrollTop: $($.attr(this, 'href')).offset().top - n
     }, 600);
   });
 
@@ -77,9 +87,9 @@ $(document).ready(function(){
     var ths = $(this.hash)
     var scroll = ths.offset().top
     if (ths[0].id == 'performers') {
-      scroll = scroll - 50
+      scroll = scroll - 70
     }else{
-      scroll = scroll - 20
+      scroll = scroll + 20
     }
 
     $('html, body').animate({
