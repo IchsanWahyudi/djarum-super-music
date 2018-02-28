@@ -74,7 +74,6 @@ $(document).ready(function(){
     if (wd <= 320) {
       n = 30
     }
-    console.log(n)
     $('html, body').animate({
       scrollTop: $($.attr(this, 'href')).offset().top - n
     }, 600);

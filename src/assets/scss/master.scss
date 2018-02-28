@@ -593,6 +593,13 @@ a{
       background: url(../images/cta-button.png) no-repeat;
       background-position: center;
       color: $white;
+      button{
+        background: none;
+        border: none;
+        text-transform: uppercase;
+        height: 50px;
+        line-height: 2;
+      }
     }
   }
   &--second{
@@ -1247,6 +1254,9 @@ footer{
       font-size: 2em;
       color: rgb(193,193,193);
       margin-left: 10px;
+      &.search{
+        width: 200px;
+      }
       &:focus{
         outline: none
       }

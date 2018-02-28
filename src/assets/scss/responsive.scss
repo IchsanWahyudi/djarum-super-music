@@ -323,6 +323,13 @@
 }
 
 @media (max-width: 800px) {
+  footer{
+    .footer{
+      li{
+        padding: 40px 25px 0;
+      }
+    }
+  }
   .location{
     &__background{
       display: none;
@@ -1066,7 +1073,14 @@
       width: 260px;
       float: none;
       margin: 0 auto;
-      padding-top: 6px;
+      padding-top: 0px;
+      padding-left: 30px;
+      img{
+        max-width: 10%;
+      }
+      input{
+        font-size: 1.6em
+      }
     }
   }
 
