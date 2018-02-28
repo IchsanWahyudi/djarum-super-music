@@ -879,8 +879,11 @@ a{
         display: flex;
         align-items: center;
         justify-content: center;
-        h2{
+        h2,h3{
           margin: 0
+        }
+        h3{
+          font-size: 1.2em;
         }
       }
     }

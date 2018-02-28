@@ -129,11 +129,14 @@
     .slick-center{
       &.slick-current{
         .slick-current__txt{
-          height: 50px;
+          height: 60px;
           bottom: 80px;
-          padding-top: 8px;
+          padding-top: 3px;
           h2{
             font-size: 1.4em;
+          }
+          h3{
+            font-size: .8em;
           }
         }
       }
@@ -625,6 +628,12 @@
       &.slick-current{
         .slick-current__txt{
           bottom: 60px;
+          h2{
+            font-size: 1.2em;
+          }
+          h3{
+            font-size: .6em;
+          }
         }
       }
     }
@@ -749,6 +758,12 @@
       &.slick-current{
         .slick-current__txt{
           bottom: 100px;
+          h2{
+            font-size: 1.4em;
+          }
+          h3{
+            font-size: .8em
+          }
         }
       }
     }
