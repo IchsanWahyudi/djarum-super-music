@@ -10,7 +10,6 @@
 
 body{
   background: url(../images/background.png);
-  background-size: cover;
   font-family: 'Tungsten-Medium';
 }
 
@@ -163,6 +162,7 @@ a{
       margin: 0 20px;
     }
   }
+  &__left,
   &__right{
     position: relative;
     li{
@@ -574,6 +574,10 @@ a{
   display: inline-block;
   &:focus{
     text-decoration: none;
+  }
+  &--index{
+    position: relative;
+    z-index: 1;
   }
   span{
     font-family: 'Tungsten-Medium';
@@ -1940,6 +1944,47 @@ footer{
     }
     &__content{
       margin-bottom: 20px;
+      .select2-container{
+        &--default{
+          .select2-selection{
+            &--single{
+              border: solid black 1px;
+              border-radius: 0;
+              height: 40px;
+            }
+            &__rendered{
+              line-height: 40px;
+              font-size: 1.4em;
+            }
+            &__arrow{
+              height: 38px;
+              b{
+                border-width: 7px 6px 0;
+                margin-left: -13px;
+                border-color: black transparent transparent;
+              }
+            }
+          }
+        }
+      }
+      
+      .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{
+        border-width: 0px 6px 7px;
+        border-color: transparent transparent black;
+      }
+
+      .select2-results{
+        &__option{
+          font-size: 1.4em;
+        }
+      }
+
+      .select2-search{
+        &__field{
+          font-size: 1.4em;
+        }
+      }
+
       .radio-input{
         [type="radio"]{
           display: none;
