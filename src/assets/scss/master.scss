@@ -1794,6 +1794,14 @@ footer{
         }
       }
     }
+    a{
+      color: $primary-color;
+      cursor: pointer;
+      transition: all ease 0.4s;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
   }
 }
 /*
@@ -1915,6 +1923,18 @@ footer{
   }
 }
 
+.select2-results{
+  &__options{
+    font-size: 1.4em;
+  }
+}
+
+.select2-search{
+  &__field{
+    font-size: 1.4em;
+  }
+}
+
 .buy-ticket{
   &__container{
     width: 730px;
@@ -1967,22 +1987,10 @@ footer{
           }
         }
       }
-      
+
       .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{
         border-width: 0px 6px 7px;
         border-color: transparent transparent black;
-      }
-
-      .select2-results{
-        &__option{
-          font-size: 1.4em;
-        }
-      }
-
-      .select2-search{
-        &__field{
-          font-size: 1.4em;
-        }
       }
 
       .radio-input{
